@@ -1,0 +1,13 @@
+@mixin headings($fontSize, $fontColor) {
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: $fontSize;
+    color: $fontColor;
+}
+
+@mixin button() {
+    @include headings(18px, $primaryBlackColor);
+    background-color: $accentColor;
+    padding: 10px 25px;
+    border: none;
+}

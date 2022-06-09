@@ -1,10 +1,144 @@
 @import './partials/setup';
 @import './partials/variables';
-
-
-// Standard Styling
-
-
+@import './partials/baseStyles';
+@import './partials/mixins';
 
 // Header Styling 
 
+header {
+    @include headings(25px, $primaryWhiteColor);
+    background-image: url(../summit/summit-assets/asset-1.jpg);
+    background-size: cover;
+    height: 100vh;
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+
+        span {
+            font-size: 75px;
+        }
+    }
+
+    h2 {
+        margin: 0
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 35%;
+    }
+
+    a {
+        @include headings(18px, $primaryWhiteColor);
+    }
+}
+
+// About Section Styling
+
+.about {
+    text-align: center;
+    padding-top: 75px;
+    margin-bottom: 75px;
+
+    h2 {
+        @include headings(32px, $primaryBlackColor);
+    }
+
+    p {
+        margin: 50px 0;
+    }
+    a {
+        @include button();
+    }
+
+}
+
+// Middle Banner Styling
+
+.middleBanner {
+    background-color: $primaryBGColor;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 200px ;
+
+        a {
+            @include headings(24px, $primaryWhiteColor);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+}
+
+// About Me Styling
+
+.aboutmeContainer {
+    display: flex;
+    padding-top: 100px;
+    margin-bottom: 150px;
+
+    img {
+        max-width: 25%;
+        margin-right: 50px;
+    }
+
+    .aboutmeContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            @include headings(32px, $primaryBlackColor);
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            @include button();
+        }
+    }
+}
+
+// Bottom Images Styling
+
+.imgContainer {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+
+    img {
+        max-width: calc((100% / 3) - 30px)
+    }
+}
+
+// Footer Styling
+
+footer {
+    background-color: $primaryBGColor;
+}
+
+.mainFooter {
+    display: flex;
+    justify-content: space-between;
+
+    form {
+
+        h3 {
+            @include headings(18px, $primaryWhiteColor);        
+        }
+    }
+}

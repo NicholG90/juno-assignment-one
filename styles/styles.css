@@ -220,3 +220,203 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 125%;
+  line-height: 1.15;
+}
+
+.wrapper {
+  max-width: 1080px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color: #F6F6F6;
+  background-image: url(../summit/summit-assets/asset-1.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+header h1 {
+  text-align: center;
+  font-size: 40px;
+}
+header h1 span {
+  font-size: 75px;
+}
+header h2 {
+  margin: 0;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 20px;
+}
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+header a {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #F6F6F6;
+}
+
+.about {
+  text-align: center;
+  padding-top: 75px;
+  margin-bottom: 75px;
+}
+.about h2 {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  color: #0F0F0F;
+}
+.about p {
+  margin: 50px 0;
+}
+.about a {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #0F0F0F;
+  background-color: #8DD7E9;
+  padding: 10px 25px;
+  border: none;
+}
+
+.middleBanner {
+  background-color: #215A6D;
+}
+.middleBanner ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 100px 200px;
+}
+.middleBanner ul a {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutmeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 100px;
+  margin-bottom: 150px;
+}
+.aboutmeContainer img {
+  max-width: 25%;
+  margin-right: 50px;
+}
+.aboutmeContainer .aboutmeContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.aboutmeContainer .aboutmeContent h2 {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  color: #0F0F0F;
+  margin: 0;
+}
+.aboutmeContainer .aboutmeContent p {
+  margin: 0;
+}
+.aboutmeContainer .aboutmeContent a {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #0F0F0F;
+  background-color: #8DD7E9;
+  padding: 10px 25px;
+  border: none;
+}
+
+.imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.imgContainer img {
+  max-width: calc(33.3333333333% - 30px);
+}
+
+footer {
+  background-color: #215A6D;
+}
+
+.mainFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.mainFooter form h3 {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #F6F6F6;
+}
