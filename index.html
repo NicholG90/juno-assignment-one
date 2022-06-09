@@ -14,9 +14,10 @@
 <body>
     <!-- Header Cotent -->
     <header>
-        <div class="wrapper">
+        <div class="wrapper mainHeader">
             <nav>
                 <h2>Summit</h2>
+                <i class="fa fa-bars"></i>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -27,25 +28,22 @@
             <h1>Welcome to <span>summit</span></h1>
         </div>
         <!-- End Wrapper -->
-        <nav>
+        <nav class="socialnav">
             <ul>
-                <li><a href="#">FB</a></li>
-                <li><a href="#">IN</a></li>
-                <li><a href="#">LN</a></li>
-                <li><a href="#">TW</a></li>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
             </ul>
         </nav>
     </header>
     <!-- Main Content -->
     <main>
         <!-- About Section -->
-        <section class="about">
-            <div class="wrapper">
-                <h2>About Summit</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cum, voluptatibus quasi officiis itaque ea iusto consectetur velit ducimus omnis at possimus aperiam numquam placeat, id harum. Excepturi placeat error atque, ad adipisci cupiditate est!</p>
-                <a href="#">Find Out More</a>
-            </div>
-            <!-- End Wrapper -->
+        <section class="wrapper about">
+            <h2>About Summit</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cum, voluptatibus quasi officiis itaque ea iusto consectetur velit ducimus omnis at possimus aperiam numquam placeat, id harum. Excepturi placeat error atque, ad adipisci cupiditate est!</p>
+            <a href="#">Find Out More</a>
         </section>
         <!-- Middle Banner Section -->
         <section class="middleBanner">
@@ -82,20 +80,22 @@
         <div class="wrapper">
         <section class="mainFooter">
             <form action="">
-                <h3>Stay Updated</h3>
+                <h3 class="footerHeadings">Stay Updated</h3>
                 <label for="email">Subscribe to our newsletter for updates.</label>
-                <input type="email" name="email" id="email" placeholder="email address" required>
-                <input type="submit" value="subscribe">
+                <div class="submissionInput">
+                    <input type="email" name="email" id="email" placeholder="email address" required class="emailInput">
+                    <input type="submit" value="subscribe" class="submitButton">
+                </div>
             </form>
             <div class="contact">
-                <h3>Contact</h3>
+                <h3 class="footerHeadings">Contact</h3>
                 <p>info@email.com</p>
                 <p>123 - 456 - 7890</p>
                 <p>123 some road,</p>
                 <p>Toronto, ON</p>
             </div>
             <div class="pages">
-                <h3>Pages</h3>
+                <h3 class="footerHeadings">Pages</h3>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -104,7 +104,7 @@
                 </ul>
             </div>
             <div class="recentPosts">
-                <h3>Recent Posts</h3>
+                <h3 class="footerHeadings">Recent Posts</h3>
                 <ul>
                     <li><a href="#">Climbing Tips</a></li>
                     <li><a href="#">Photography Guide</a></li>
@@ -113,7 +113,7 @@
                 </ul>
             </div>
         </section>
-        <section>
+        <section class="copyrightBanner">
             <p>Copyright (C) 2018 HackerYou</p>
         </section>
         </div>

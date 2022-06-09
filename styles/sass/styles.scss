@@ -3,20 +3,49 @@
 @import './partials/baseStyles';
 @import './partials/mixins';
 
-// Header Styling 
+// Styling outside wrapper
 
 header {
-    @include headings(25px, $primaryWhiteColor);
     background-image: url(../summit/summit-assets/asset-1.jpg);
     background-size: cover;
     height: 100vh;
 
+    .socialnav {
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 5%;
+            li {
+                margin: 10px 0;
+        
+                a {
+                    color: $primaryBGColor
+                }
+        
+                a:hover {
+                    color: $primaryBlackColor
+                }
+            }
+        }
+    }
+}
+
+// Header Styling 
+
+.mainHeader {
+    @include headings(25px, $primaryWhiteColor);
+
     h1 {
         text-align: center;
-        font-size: 40px;
+        font-size: 32px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 150px;
 
         span {
-            font-size: 75px;
+            font-size: 150px;
         }
     }
 
@@ -28,18 +57,53 @@ header {
         display: flex;
         justify-content: space-between;
         padding-top: 20px;
+
+        .fa-bars {
+            display: none
+        }
+
+        ul {
+                display: flex;
+                justify-content: flex-end;
+                flex-basis: 50%;
+        
+                li {
+                    margin: 0 auto;
+        
+                    a {
+                        @include headings(18px, $primaryWhiteColor);
+                    }
+        
+                    a:hover {
+                        color: $primaryBGColor;
+                    }
+        
+                }
+            }
     }
 
-    ul {
-        display: flex;
-        justify-content: space-between;
-        flex-basis: 35%;
-    }
+}
 
-    a {
-        @include headings(18px, $primaryWhiteColor);
+@media (max-width: 800px) {
+    .mainHeader {
+        nav {
+            .fa-bars {
+            display: block;
+            }
+            ul {
+            display:none
+            }
+        }
+}
+    header {
+        .socialnav {
+            ul {
+                display: none;
+            }
+        }
     }
 }
+
 
 // About Section Styling
 
@@ -47,6 +111,7 @@ header {
     text-align: center;
     padding-top: 75px;
     margin-bottom: 75px;
+    width: 50%;
 
     h2 {
         @include headings(32px, $primaryBlackColor);
@@ -68,8 +133,8 @@ header {
 
     ul {
         display: flex;
-        justify-content: space-between;
-        padding: 100px 200px ;
+        justify-content: space-evenly;
+        padding: 100px 0 ;
 
         a {
             @include headings(24px, $primaryWhiteColor);
@@ -130,16 +195,56 @@ header {
 footer {
     background-color: $primaryBGColor;
     padding-top: 100px;
+    color: $primaryWhiteColor
 }
 
 .mainFooter {
     display: flex;
     justify-content: space-between;
 
-    form {
+    .footerHeadings {
+         @include headings(18px, $primaryWhiteColor);
+    }
 
-        h3 {
-            @include headings(18px, $primaryWhiteColor);        
+    form {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+
+        .submissionInput {
+
+            display: flex;
+
+            .emailInput {
+                flex-basis: 75%;
+            }
+            .submitButton {
+                    flex-basis: 25%;
+                    @include button();
+                }
         }
+
+
+
+    }
+
+    .contact {
+
+        p {
+            margin: 0;
+        }
+    }
+
+    a {
+        color: $primaryWhiteColor
+    }
+
+}
+
+.copyrightBanner {
+    p {
+        text-align: center;
+        padding-top: 50px;
+        margin: 0;
     }
 }

@@ -248,25 +248,58 @@ a {
 }
 
 header {
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  font-size: 25px;
-  color: #F6F6F6;
   background-image: url(../summit/summit-assets/asset-1.jpg);
   background-size: cover;
   height: 100vh;
 }
-header h1 {
+header .socialnav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-right: 5%;
+}
+header .socialnav ul li {
+  margin: 10px 0;
+}
+header .socialnav ul li a {
+  color: #215A6D;
+}
+header .socialnav ul li a:hover {
+  color: #0F0F0F;
+}
+
+.mainHeader {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color: #F6F6F6;
+}
+.mainHeader h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 150px;
 }
-header h1 span {
-  font-size: 75px;
+.mainHeader h1 span {
+  font-size: 150px;
 }
-header h2 {
+.mainHeader h2 {
   margin: 0;
 }
-header nav {
+.mainHeader nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,27 +308,49 @@ header nav {
           justify-content: space-between;
   padding-top: 20px;
 }
-header ul {
+.mainHeader nav .fa-bars {
+  display: none;
+}
+.mainHeader nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
-header a {
+.mainHeader nav ul li {
+  margin: 0 auto;
+}
+.mainHeader nav ul li a {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   color: #F6F6F6;
 }
+.mainHeader nav ul li a:hover {
+  color: #215A6D;
+}
 
+@media (max-width: 800px) {
+  .mainHeader nav .fa-bars {
+    display: block;
+  }
+  .mainHeader nav ul {
+    display: none;
+  }
+
+  header .socialnav ul {
+    display: none;
+  }
+}
 .about {
   text-align: center;
   padding-top: 75px;
   margin-bottom: 75px;
+  width: 50%;
 }
 .about h2 {
   text-transform: uppercase;
@@ -323,10 +378,10 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 100px 200px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 100px 0;
 }
 .middleBanner ul a {
   text-transform: uppercase;
@@ -404,6 +459,7 @@ header a {
 footer {
   background-color: #215A6D;
   padding-top: 100px;
+  color: #F6F6F6;
 }
 
 .mainFooter {
@@ -414,9 +470,52 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.mainFooter form h3 {
+.mainFooter .footerHeadings {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   color: #F6F6F6;
+}
+.mainFooter form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.mainFooter form .submissionInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mainFooter form .submissionInput .emailInput {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+.mainFooter form .submissionInput .submitButton {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #0F0F0F;
+  background-color: #8DD7E9;
+  padding: 10px 25px;
+  border: none;
+}
+.mainFooter .contact p {
+  margin: 0;
+}
+.mainFooter a {
+  color: #F6F6F6;
+}
+
+.copyrightBanner p {
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
 }
