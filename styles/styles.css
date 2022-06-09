@@ -392,11 +392,10 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 75px;
 }
 .imgContainer img {
   max-width: calc(33.3333333333% - 30px);
@@ -404,6 +403,7 @@ header a {
 
 footer {
   background-color: #215A6D;
+  padding-top: 100px;
 }
 
 .mainFooter {

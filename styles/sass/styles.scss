@@ -117,8 +117,8 @@ header {
 
 .imgContainer {
     display: flex;
-    flex-basis: 100%;
     justify-content: space-between;
+    margin-bottom: 75px;
 
     img {
         max-width: calc((100% / 3) - 30px)
@@ -129,6 +129,7 @@ header {
 
 footer {
     background-color: $primaryBGColor;
+    padding-top: 100px;
 }
 
 .mainFooter {
