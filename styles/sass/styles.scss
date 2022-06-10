@@ -8,6 +8,7 @@
 header {
     background-image: url(../summit/summit-assets/asset-1.jpg);
     background-size: cover;
+    background-position: center;
     height: 100vh;
 
     .socialnav {
@@ -17,6 +18,11 @@ header {
             flex-direction: column;
             align-items: flex-end;
             padding-right: 5%;
+
+            @include respond-medium {
+                    display: none;
+                }
+
             li {
                 margin: 10px 0;
         
@@ -35,17 +41,33 @@ header {
 // Header Styling 
 
 .mainHeader {
-    @include headings(25px, $primaryWhiteColor);
+    @include headings(1.3rem, $primaryWhiteColor);
 
     h1 {
         text-align: center;
-        font-size: 32px;
+        font-size: 2rem;
         display: flex;
         flex-direction: column;
         padding-top: 150px;
 
+        @include respond-medium {
+                font-size: 1.8rem;
+            }
+
+        @include respond-small {
+                font-size: 1.5rem;
+            }
+
         span {
-            font-size: 150px;
+            font-size: 7rem;
+
+            @include respond-medium {
+                    font-size: 5rem;
+                }
+
+            @include respond-small {
+                    font-size: 3.8rem;
+                }
         }
     }
 
@@ -59,19 +81,27 @@ header {
         padding-top: 20px;
 
         .fa-bars {
-            display: none
+            display: none;
+        
+            @include respond-medium {
+                display: block;
+            }
         }
 
         ul {
                 display: flex;
                 justify-content: flex-end;
                 flex-basis: 50%;
+
+                @include respond-medium {
+                        display: none;
+                    }
         
                 li {
                     margin: 0 auto;
         
                     a {
-                        @include headings(18px, $primaryWhiteColor);
+                        @include headings(1rem, $primaryWhiteColor);
                     }
         
                     a:hover {
@@ -84,41 +114,29 @@ header {
 
 }
 
-@media (max-width: 800px) {
-    .mainHeader {
-        nav {
-            .fa-bars {
-            display: block;
-            }
-            ul {
-            display:none
-            }
-        }
-}
-    header {
-        .socialnav {
-            ul {
-                display: none;
-            }
-        }
-    }
-}
-
 
 // About Section Styling
 
 .about {
     text-align: center;
-    padding-top: 75px;
+    padding: 75px 25px;
     margin-bottom: 75px;
     width: 50%;
 
+    @include respond-medium {
+            width: 75%;
+        }
+    @include respond-small {
+        width: 100%;
+    }
+
     h2 {
-        @include headings(32px, $primaryBlackColor);
+        @include headings(2rem, $primaryBlackColor);
     }
 
     p {
         margin: 50px 0;
+        line-height: 1.5;
     }
     a {
         @include button();
@@ -134,13 +152,23 @@ header {
     ul {
         display: flex;
         justify-content: space-evenly;
-        padding: 100px 0 ;
+        padding: 100px 0;
+
+        @include respond-small {
+                flex-direction: column;
+                padding: 50px 0;
+            }
 
         a {
-            @include headings(24px, $primaryWhiteColor);
+            @include headings(1.3rem, $primaryWhiteColor);
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @include respond-small {
+                    margin: 25px;
+                    font-size: 1.5rem;
+                }
         }
     }
 
@@ -164,12 +192,13 @@ header {
         justify-content: space-between;
 
         h2 {
-            @include headings(32px, $primaryBlackColor);
-            margin: 0;
+            @include headings(2rem, $primaryBlackColor);
+            margin: 0 0 15px 0;
         }
 
         p {
-            margin: 0;
+            margin: 0 0 15px 0;
+            line-height: 1.5;
         }
 
         a {
@@ -184,9 +213,23 @@ header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 75px;
+    
+    @include respond-small {
+         margin: 0 auto;
+         width: 100%
+    }
 
     img {
-        max-width: calc((100% / 3) - 30px)
+        max-width: calc((100% / 3) - 30px);
+
+        @include respond-small {
+            max-width: calc(100% / 2);
+            }
+    }
+    img:nth-child(3) {
+        @include respond-small {
+            display: none;
+            }
     }
 }
 
@@ -202,23 +245,47 @@ footer {
     display: flex;
     justify-content: space-between;
 
+    @include respond-medium {
+        flex-direction: column;
+    }
+
     .footerHeadings {
-         @include headings(18px, $primaryWhiteColor);
+         @include headings(1rem, $primaryWhiteColor);
+         margin-bottom: 5px;
+
+         @include respond-small {
+            margin: 15px 0 5px 0;
+         }
     }
 
     form {
         display: flex;
         flex-direction: column;
         flex-basis: 50%;
+        
+        @include respond-medium {
+            text-align: center;
+        }
 
         .submissionInput {
-
             display: flex;
+            margin-top: 15px;
+
+            @include respond-medium {
+                width: 85%;
+                margin:15px auto;
+            }
+            @include respond-small {
+                flex-direction: column;
+            }
 
             .emailInput {
+                padding: 10px 25px;
                 flex-basis: 75%;
+                border: none;
             }
             .submitButton {
+                    cursor: pointer;
                     flex-basis: 25%;
                     @include button();
                 }
@@ -226,6 +293,29 @@ footer {
 
 
 
+    }
+
+    .footerMenus {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 45%;
+        line-height: 1.5;
+        font-size: 0.8rem;
+
+        @include respond-medium {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        @include respond-small {
+            flex-direction: column;
+        }
+        .contact p {
+            font-style: normal;
+        }
+        .pages {
+            text-transform: uppercase;
+        }
     }
 
     .contact {

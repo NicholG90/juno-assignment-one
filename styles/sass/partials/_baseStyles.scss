@@ -10,14 +10,23 @@ html {
     margin: 0 auto;
 }
 
-ul {
+h1,
+h2,
+h3,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
+}
+
+ul {
     list-style: none;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+    display: block;
 }
 
 a {
