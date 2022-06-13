@@ -125,6 +125,7 @@ header {
 
     @include respond-medium {
             width: 75%;
+            margin-bottom: 15px;
         }
     @include respond-small {
         width: 100%;
@@ -181,15 +182,32 @@ header {
     padding-top: 100px;
     margin-bottom: 150px;
 
-    img {
-        max-width: 25%;
+    @include respond-medium {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .aboutMeImage {
+        width: 100%;
         margin-right: 50px;
+        align-self: center;
+
+            @include respond-medium {
+                width: 90%;
+                margin: 0 auto;
+            }
+            
     }
 
     .aboutmeContent {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include respond-medium {
+            text-align: center;
+            padding-top: 15px;
+        }
 
         h2 {
             @include headings(2rem, $primaryBlackColor);
@@ -203,6 +221,11 @@ header {
 
         a {
             @include button();
+            width: fit-content;
+
+            @include respond-medium {
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -238,7 +261,11 @@ header {
 footer {
     background-color: $primaryBGColor;
     padding-top: 100px;
-    color: $primaryWhiteColor
+    color: $primaryWhiteColor;
+
+    @include respond-medium {
+        padding-top: 25px;
+    }
 }
 
 .mainFooter {

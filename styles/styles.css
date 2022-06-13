@@ -388,6 +388,7 @@ header .socialnav ul li a:hover {
 @media (max-width: 850px) {
   .about {
     width: 75%;
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 550px) {
@@ -466,9 +467,26 @@ header .socialnav ul li a:hover {
   padding-top: 100px;
   margin-bottom: 150px;
 }
-.aboutmeContainer img {
-  max-width: 25%;
+@media (max-width: 850px) {
+  .aboutmeContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
+.aboutmeContainer .aboutMeImage {
+  width: 100%;
   margin-right: 50px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+@media (max-width: 850px) {
+  .aboutmeContainer .aboutMeImage {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 .aboutmeContainer .aboutmeContent {
   display: -webkit-box;
@@ -481,6 +499,12 @@ header .socialnav ul li a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 850px) {
+  .aboutmeContainer .aboutmeContent {
+    text-align: center;
+    padding-top: 15px;
+  }
 }
 .aboutmeContainer .aboutmeContent h2 {
   text-transform: uppercase;
@@ -501,6 +525,14 @@ header .socialnav ul li a:hover {
   background-color: #8DD7E9;
   padding: 10px 25px;
   border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 850px) {
+  .aboutmeContainer .aboutmeContent a {
+    margin: 0 auto;
+  }
 }
 
 .imgContainer {
@@ -536,6 +568,11 @@ footer {
   background-color: #215A6D;
   padding-top: 100px;
   color: #F6F6F6;
+}
+@media (max-width: 850px) {
+  footer {
+    padding-top: 25px;
+  }
 }
 
 .mainFooter {
